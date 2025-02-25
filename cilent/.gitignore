@@ -1,0 +1,44 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependency lock files (optional, depending on your preference)
+# If you want to commit them, remove these lines
+package-lock.json
+yarn.lock
+
+# Vite-specific files
+.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/

@@ -1,0 +1,60 @@
+# Node.js dependencies
+node_modules/
+
+# Build output (if you’re using a build step, e.g., with TypeScript or a bundler)
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Dependency lock files (optional, depending on your preference)
+# Remove these if you want to commit them
+package-lock.json
+yarn.lock
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+*.test.js
+*.spec.js  # Remove if you want to commit test files
+
+# Temporary files
+*.tmp
+*.swp
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Database files (if applicable)
+*.sqlite
+*.db
+*.sql
+
+# Production-specific
+pm2.json
