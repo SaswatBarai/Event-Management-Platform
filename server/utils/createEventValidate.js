@@ -7,8 +7,8 @@ const createEventValidate = [
     body("date").trim().isDate().withMessage("Invalid date"),
     body("time").trim().isTime().withMessage("Invalid time"),
     body("imageUrl").trim().isURL().withMessage("Invalid image URL"),
-    body("capacity").trim().isInt({min:1}).withMessage("Capacity must be at least 1"),
-    body("isPublic").trim().isBoolean().withMessage("Invalid isPublic value"),
+    // body("capacity").trim().isInt({min:1}).withMessage("Capacity must be at least 1"),
+    // body("isPublic").trim().isBoolean().withMessage("Invalid isPublic value"),
     body("status").trim().isIn(["draft","published","cancelled"]).withMessage("Invalid status value"),
 ]
 

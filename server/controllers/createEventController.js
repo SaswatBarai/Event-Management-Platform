@@ -9,7 +9,7 @@ const createEventController = async (req,res,next)=>{
             return res.status(400).json({message:"Validation error",errors:errors.array()});
         }       
 
-        const {title,description,location,date,time,imageUrl,capacity,isPublic,status} = req.body;
+        const {title,description,location,date,time,imageUrl,status} = req.body;
         const organizer = await userModel.findById(req.user.userId);
         if(!organizer){
             return res.status(404).json({message:"Organizer not found"});
@@ -17,7 +17,7 @@ const createEventController = async (req,res,next)=>{
         organizer.createdEvents.push(event._id);
         await organizer.save();
         
-        const event = await EventModel.create({title,description,location,date,time,imageUrl,capacity,isPublic,status,organizer:req.user.userId});
+        const event = await EventModel.create({title,description,location,date,time,imageUrl,status,organizer:req.user.userId});
 
         res.status(201).json({message:"Event created successfully",event});
         

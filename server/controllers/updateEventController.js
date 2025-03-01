@@ -7,8 +7,8 @@ const updateEventController = async (req,res,next)=>{
         if(!errors.isEmpty()){
             return res.status(400).json({message:"Validation error",errors:errors.array()});
         }
-        const {title,description,location,date,time,imageUrl,capacity,isPublic,status} = req.body;
-        const event = await eventModel.findByIdAndUpdate(req.params.id,{title,description,location,date,time,imageUrl,capacity,isPublic,status},{new:true});
+        const {title,description,location,date,time,imageUrl,status} = req.body;
+        const event = await eventModel.findByIdAndUpdate(req.params.id,{title,description,location,date,time,imageUrl,status},{new:true});
         res.status(200).json({message:"Event updated successfully",event});
         
     } catch (error) {
